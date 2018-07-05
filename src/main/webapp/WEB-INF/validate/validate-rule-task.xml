@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<param_validators>
+    <param_validator url="/TaskManager/v1/task" failpath=""
+                     errorHandler="com.huawei.taskManager.utils.WSFErrorHandler" method="post"
+                     dataPattern="json" decode="false">
+        <parameter name="[judgeFile]" required="false" errorKey="DEV-187-50002"
+                   errorMessage="judgeFile仅支持数字、字母和-,;_.:/字符（1-256个字符）">
+            <validator name="REGEXP_VALIDATOR" rule="^[A-Za-z0-9\-\,\;_\.\:\/]{1,256}$" />
+        </parameter>
+        <parameter name="[targetFile]" required="false" errorKey="DEV-187-50002"
+                   errorMessage="targetFile仅支持数字、字母和-,;_.:/字符（1-256个字符）">
+            <validator name="REGEXP_VALIDATOR" rule="^[A-Za-z0-9\-\,\;_\.\:\/]{1,256}$" />
+        </parameter>
+        <parameter name="[callbackUrl]" required="false" errorKey="DEV-187-50002"
+                   errorMessage="callbackUrl仅支持数字、字母和-,;_.:/字符（1-512个字符）">
+            <validator name="REGEXP_VALIDATOR" rule="^[A-Za-z0-9\-\,\;_\.\:\/]{1,512}$" />
+        </parameter>
+    </param_validator>
+
+    <param_validator url="/TaskManager/v1/worker" failpath=""
+                     errorHandler="com.huawei.taskManager.utils.WSFErrorHandler" method="post"
+                     dataPattern="json" decode="false">
+        <parameter name="[workerDomain]" required="false" errorKey="DEV-187-50002"
+                   errorMessage="workerDomain仅支持数字、字母和-,;_.:/字符（1-256个字符）">
+            <validator name="REGEXP_VALIDATOR" rule="^[A-Za-z0-9\-\,\;_\.\:\/]{1,256}$" />
+        </parameter>
+    </param_validator>
+
+    <param_validator url="/TaskManager/v1/{taskId}/callback/docker" failpath=""
+                     errorHandler="com.huawei.taskManager.utils.WSFErrorHandler" method="post"
+                     dataPattern="json" decode="false">
+        <parameter name="{taskId}" required="false" errorKey="DEV-187-50002"
+                   errorMessage="{taskId}仅支持数字、字母和-,;_.:/字符（1-256个字符）">
+            <validator name="REGEXP_VALIDATOR" rule="^[A-Za-z0-9\-\,\;_\.\:\/]{1,256}$" />
+        </parameter>
+        <parameter name="[status]" required="false" errorKey="DEV-187-50002"
+                   errorMessage="status仅支持数字、字母和-,;_.:/字符（1-256个字符）">
+            <validator name="REGEXP_VALIDATOR" rule="^[A-Za-z0-9\-\,\;_\.\:\/]{1,256}$" />
+        </parameter>
+        <parameter name="[result]" required="false" errorKey="DEV-187-50002"
+                   errorMessage="result 仅支持最大长度2048">
+            <validator name="MAX_LENGTH_VALIDATOR" maxLength="2048" />
+        </parameter>
+    </param_validator>
+
+
+</param_validators>

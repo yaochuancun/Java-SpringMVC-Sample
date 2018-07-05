@@ -1,25 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <common-configs>
     <exclude-url allUrlCheck="true"  failPath="" stateCode="200" errorHandler="">
-        <!--&lt;!&ndash;task&ndash;&gt;-->
-        <!--<url-pattern>/TaskManager/v1/task</url-pattern>-->
-        <!--<url-pattern>/TaskManager/v1/worker</url-pattern>-->
-        <!--<url-pattern>/TaskManager/v1/{taskId}/callback/docker</url-pattern>-->
     </exclude-url>
-    <!--<exclude-parameter>-->
-        <!--<form-exclude-parameter allParameterCheck="true" errorHandler="com.huawei.taskManager.utils.WSFErrorHandler">-->
-            <!--<parameter-name>file</parameter-name>-->
-            <!--<parameter-name>cftk</parameter-name>-->
-            <!--<parameter-name>_</parameter-name>-->
-        <!--</form-exclude-parameter>-->
-
-        <!--<urlpath-exclude-parameter-->
-                <!--allParameterCheck="true" errorHandler="com.huawei.taskManager.utils.WSFErrorHandler">-->
-            <!--<parameter-name>id</parameter-name>-->
-        <!--</urlpath-exclude-parameter>-->
-        <!--<json-exclude-parameter allParameterCheck="true" errorHandler="com.huawei.taskManager.utils.WSFErrorHandler" >-->
-
-        <!--</json-exclude-parameter>-->
-    <!--</exclude-parameter>-->
 
 </common-configs>

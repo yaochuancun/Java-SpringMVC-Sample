@@ -248,8 +248,7 @@
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-redis</artifactId>
-            <!--<version>1.7.2.RELEASE</version>-->
-            <version>1.6.0.RELEASE</version>
+            <version>2.0.8.RELEASE</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.slf4j</groupId>
@@ -266,11 +265,11 @@
             </exclusions>
         </dependency>
 
+        <!--redis-->
         <dependency>
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>
             <version>2.9.0</version>
-            <!--<version>2.6.2</version>-->
             <exclusions>
                 <exclusion>
                     <groupId>org.apache.commons</groupId>
@@ -278,6 +277,7 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
         <dependency>
             <groupId>commons-lang</groupId>
             <artifactId>commons-lang</artifactId>

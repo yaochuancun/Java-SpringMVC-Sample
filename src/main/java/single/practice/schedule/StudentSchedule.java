@@ -6,16 +6,16 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 @Component
-public class TaskSchedule {
+public class StudentSchedule {
 
-    private static final Logger logger = LoggerFactory.getLogger(TaskSchedule.class);
+    private static final Logger logger = LoggerFactory.getLogger(StudentSchedule.class);
 
     /**
      *  定时调用任务,10S轮询一次
      */
     @Scheduled(fixedRate = 10*1000)
-    public void taskRun() {
-        logger.info("taskRun start");
+    public void run() {
+        logger.info("student scheduel run per 10 sencod");
     }
 }
 

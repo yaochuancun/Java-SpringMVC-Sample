@@ -6,9 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
-import single.practice.utils.string.EncodeForLogUtil;
 
-import java.text.Normalizer;
 import java.util.*;
 
 @Repository
@@ -382,7 +380,7 @@ public class RedisApplicationsDao {
         if(response == 1L){
             return true;
         }else{
-            logger.info("listDel failed,key:" + EncodeForLogUtil.handleLogForging(Normalizer.normalize(key, Normalizer.Form.NFKC)) + ", value:" + EncodeForLogUtil.handleLogForging(Normalizer.normalize(value, Normalizer.Form.NFKC)));
+            logger.info("listDel failed,key:" + key);
             return false;
         }
     }

@@ -5,39 +5,37 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import single.practice.beans.Task;
-import single.pro.controller.BaseController;
 
 import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * Task Manager
+ * 以学生场景的例子，来叙述DAO Service Controller各个组件之间的配合
+ * Student Manager
+ * @date 2018/07/05
  */
 @SuppressWarnings({"WeakerAccess", "CanBeFinal", "unused"})
 @RestController
 @RequestMapping("/v1")
-public class TaskController extends BaseController {
-    private static final Logger logger = LoggerFactory.getLogger(TaskController.class);
-    private static final boolean INIT_WORKSPACE = Constant.KEY_TRUE.equalsIgnoreCase(ConfigUtil.getProperty("IF_INIT_WORKSPACE"));
-
-    @Autowired
-    private TaskService taskService;
-
-    @Autowired
-    private ManagerService managerService;
-
-    @Autowired
-    private MyFilesService myFilesService;
-
-    @Autowired
-    private RunCodeService runCodeService;
+public class StudentController{
+    private static final Logger logger = LoggerFactory.getLogger(StudentController.class);
 
     /**
-     * springmvc加载完成后执行初始化方法
+     * springMVC加载完成后执行初始化方法
      */
     @PostConstruct()
     public void init(){
-        logger.info("after spring mvc start,first exec.");
+        logger.info("student manager class, spring mvc init operation");
+    }
+
+    /**
+     * 测试接口
+     * @param task
+     * @return
+     */
+    @RequestMapping(value = "/test", method = RequestMethod.GET, produces = "application/json")
+    public String test(@RequestBody Task task, HttpServletRequest request){
+        return "success";
     }
 
     /**

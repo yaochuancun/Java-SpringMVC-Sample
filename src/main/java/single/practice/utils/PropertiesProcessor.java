@@ -15,9 +15,9 @@ import java.util.List;
 import java.util.Properties;
 
 /**
- * 
+ *
  * <一句话功能简述> <功能详细描述>
- * 
+ *
  * @author yWX243867
  * @version [版本号, 2015年4月20日]
  * @see [相关类/方法]
@@ -113,9 +113,9 @@ public  class PropertiesProcessor extends DefaultPropertiesPersister {
 		try {
 			value1 = crypter.decrypt(value);
 		} catch (IllegalArgumentException e) {
-			LOGGER.error(StrUtils.toOneLine("IllegalArgument"));
+			LOGGER.error(StrUtil.toOneLine("IllegalArgument"));
 		} catch (AppRuntimeException e) {
-			LOGGER.error(StrUtils.toOneLine("AppRuntimeException, Properties decode failed , pelase check the properties"));
+			LOGGER.error(StrUtil.toOneLine("AppRuntimeException, Properties decode failed , pelase check the properties"));
 		}
 
 		return value1;

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<common-configs>
-    <exclude-url allUrlCheck="true"  failPath="" stateCode="200" errorHandler="">
-    </exclude-url>
-
-</common-configs>
